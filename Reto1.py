@@ -22,4 +22,16 @@ if fecha > navidad:
 
 dias = (navidad - fecha).days
 
-print(f"¡Faltan {dias} días para Navidad!")
+print(f"¡Faltan {dias} días para Navidad!\n")
+
+#Menú de villancicos. 
+#Se debe de mostrar un menú con varias opciones de villancicos.  
+#El usuario elige una opción y el programa muestra la letra del villancico. 
+#El menú debe repetirse hasta que el usuario elija “SALIR”
+print("Menú de Villancicos\n 1.Campanas de Belen.\n " \
+"2.Hacia Belen va Una Burra.\n 3.Los Peces en el Río.\n 4.Mi Burrito Sabanero.\n 5.Salir")
+
+with open("archivo.txt", "r", encoding="utf-8") as archivo:
+    contenido = archivo.read()
+
+print(contenido)
