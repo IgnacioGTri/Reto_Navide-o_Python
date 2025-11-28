@@ -55,8 +55,53 @@ while True:
             print("\n" + archivo.read())
 
     elif opcion == "5":
-        print("¡Se acabó los Villancicos!")
+        print("¡Se acabó los Villancicos!\n")
         break
 
     else:
         print("Opción no válida, intenta de nuevo.")
+        
+#Figura navideña en Python (árbol, estrella o regalos).
+#El programa debe pedir un número entero positivo.
+#Con ese número, debe dibujar una figura navideña (por ejemplo, con * un
+#árbol de navidad). El tamaño de la figura debe adaptarse al número introducido.
+
+
+while True:
+    n = int(input("\nPara elegir tu figura navideña introduce un número del 1 al 9: "))
+
+    if 1 <= n <= 3:
+        # Árbol
+        print("   *")
+        print("  ***")
+        print(" *****")
+        print("*******")
+        print("  |||")
+        break
+
+    elif 4 <= n <= 6:
+        # Estrella
+        print("   *")
+        print(" *   *")
+        print("*     *")
+        print("*******")
+        print(" *   *")
+        print("   *")
+        break
+
+    elif 7 <= n <= 9:
+        # Regalo
+        print("    |")
+        print("   ---")
+        print("#########")
+        print("#   |   #")
+        print("#   |   #")
+        print("#########")
+        break
+
+    else:
+        print("Número fuera del rango 1–9.")
+
+    
+#despedida
+print("¡¡¡Felices Fiestas!!!")    
