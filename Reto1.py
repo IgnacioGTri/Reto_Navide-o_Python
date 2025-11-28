@@ -28,10 +28,35 @@ print(f"¡Faltan {dias} días para Navidad!\n")
 #Se debe de mostrar un menú con varias opciones de villancicos.  
 #El usuario elige una opción y el programa muestra la letra del villancico. 
 #El menú debe repetirse hasta que el usuario elija “SALIR”
-print("Menú de Villancicos\n 1.Campanas de Belen.\n " \
-"2.Hacia Belen va Una Burra.\n 3.Los Peces en el Río.\n 4.Mi Burrito Sabanero.\n 5.Salir")
+while True:
+    print("\nMenú de Villancicos")
+    print("1. Campanas de Belén")
+    print("2. Hacia Belén va una Burra")
+    print("3. Los Peces en el Río")
+    print("4. Mi Burrito Sabanero")
+    print("5. Salir")
 
-with open("archivo.txt", "r", encoding="utf-8") as archivo:
-    contenido = archivo.read()
+    opcion = input("Elige una opción: ")
 
-print(contenido)
+    if opcion == "1":
+        with open("campanas.txt", "r", encoding="utf-8") as archivo:
+            print("\n" + archivo.read())
+
+    elif opcion == "2":
+        with open("burra.txt", "r", encoding="utf-8") as archivo:
+            print("\n" + archivo.read())
+
+    elif opcion == "3":
+        with open("peces.txt", "r", encoding="utf-8") as archivo:
+            print("\n" + archivo.read())
+
+    elif opcion == "4":
+        with open("sabanero.txt", "r", encoding="utf-8") as archivo:
+            print("\n" + archivo.read())
+
+    elif opcion == "5":
+        print("¡Se acabó los Villancicos!")
+        break
+
+    else:
+        print("Opción no válida, intenta de nuevo.")
